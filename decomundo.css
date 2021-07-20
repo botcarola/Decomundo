@@ -5,16 +5,12 @@ html{
 
 body{
     width: 100%;
-    height: 1200px;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url(bg.png) ;
-    background-repeat: no-repeat;
-    background-position: 50%; 
-    background-size: 100%;   
+     
     
 }
 
@@ -22,21 +18,40 @@ body{
 
 main{
     width: 100%;
-    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;    
-    align-items: center;
+    
     
     
 }
 
+.background{
+    width: 100%;
+    height: 1000px;
+    background: url(bg.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    
+    
+
+}
+
 .logo{
     width: 100%;
-    height: 10%;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column; 
+    justify-content: space-evenly;     
     align-items: center;
+    margin: 20px;
+    padding: 30px;
+    
     
 }
 
@@ -58,6 +73,18 @@ main{
 
 
 
+/** NAV **/
+
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(68, 68, 68);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    
+}
 
 ul{
     list-style: none;
@@ -84,20 +111,6 @@ a{
     
 }
 
-
-footer{
-    background-color: #444444;
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: space-evenly;
-    color: white;
-}
-
-
-
-
-
 .fa-whatsapp{
     font-size: 30px;
     color: white;
@@ -117,3 +130,26 @@ footer{
     font-size: 30px;
     color: white;
 }
+
+
+
+
+
+
+/** FOOTER **/
+
+
+
+
+footer{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+
+
+
+
