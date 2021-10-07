@@ -25,7 +25,7 @@ main{
 
 .background{
     width: 100%;
-    height: 1000px;
+    min-height: 100vh;
     background: url(bg.png) ;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,10 +58,6 @@ main{
     font-size: 25px;   
 }
 
-.modal-login{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-}
 
 .modal-login{
     width: 30%;
@@ -70,7 +66,9 @@ main{
     border: 1px, solid rgb(68, 68, 68);
     border-radius: 5px;
     background-color: #EAE6E4;   
-    padding: 20px;     
+    padding: 20px; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
 }
 
 .form-login{
@@ -125,19 +123,20 @@ main{
 
 .container-close-modal{
     display: flex;     
-    justify-content: right;    
+    justify-content: right;   
 }
 
 .container-close-modal button{
     border-style: none;
+
 }
 
 .container-close-modal button:hover{
     color: rgb(110, 68, 6);
 }
 
-.fa-window-close{
-    font-size: 25px;
+.button-close-modal{
+    background-color: #EAE6E4;
 }
 
 .ul-login{  
@@ -146,7 +145,7 @@ main{
     flex-direction: column;
     padding: 0;
     margin-right: 40px;    
-    font-size: 18px;
+    font-size: 16px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -250,3 +249,36 @@ nav{
 
 
 
+/** MEDIA QUERY // RESPONSIVE **/
+
+@media screen and (max-width: 1650px){
+
+    .modal-login{
+        width: 40%;
+    }
+
+    .loggin{
+        width: 40%;
+    }
+
+    .social-media{
+        width: 20%;
+    }
+
+}
+
+@media screen and (max-width: 1350px){
+
+    .modal-login{
+        width: 55%;
+    }
+
+    .loggin{
+        width: 55%;
+    }
+
+    .background{
+
+    }
+
+}
