@@ -1,17 +1,10 @@
-html{
-    margin: 0;
-    padding: 0;
-}
-
 body{
-    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-     
-    
+    overflow: hidden;     
+    font-family: 'Cinzel Decorative', cursive;
 }
 
 a{
@@ -26,13 +19,8 @@ ul{
 /** MAIN **/
 
 main{
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;    
-    
-    
-    
+    flex-direction: column;      
 }
 
 .background{
@@ -46,11 +34,7 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;   
-    
-    
-
 } 
-
 
 .logo{
     
@@ -59,58 +43,138 @@ main{
     justify-content: space-evenly;     
     align-items: center;
     margin: 20px;
-    padding: 30px;
-    
-    
+    padding: 30px;      
 }
 
 .logotitle{
-    font-family: 'Cinzel Decorative', cursive;
     font-weight: 400;
     font-size: 100px;
     color: rgb(68, 68, 68); 
     margin: 0; 
-
 }
 
 .logosubtitle{
-    font-family: 'Cinzel Decorative', cursive; 
     color: rgb(68, 68, 68);   
-    font-size: 25px;
-   
+    font-size: 25px;   
 }
 
-.list-home{
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    
-    
+.modal-login{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
 }
 
-.list{
-    font-family: 'Cinzel Decorative', cursive;
+.modal-login{
+    width: 30%;
+    display: none; 
+    justify-content: space-between;   
+    border: 1px, solid rgb(68, 68, 68);
+    border-radius: 5px;
+    background-color: #EAE6E4;   
+    padding: 20px;     
+}
+
+.form-login{
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-login span{
+    padding: 10px;
     font-size: 25px;
     font-weight: 700;
+}
+
+.form-login label{
+    padding: 10px;
+    display: flex;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.form-login input{
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 10px;
+    align-items: center;
+}
+
+.form-login button{
+    width: 35%;
+    padding: 5px;
+    margin: 20px 10px;   
+    border-style: none; 
+    background-color: rgb(68, 68, 68);
+    border: 1px solid rgb(68, 68, 68);
+    color: white;
+    border-radius: 5px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 600;
+}
+
+.form-login button:hover{
+    background-color: rgb(78, 52, 12);
+}
+
+.list-loggin{
+    display: flex;
     
 }
 
+.container-close-modal{
+    display: flex;     
+    justify-content: right;    
+}
+
+.container-close-modal button{
+    border-style: none;
+}
+
+.container-close-modal button:hover{
+    color: rgb(110, 68, 6);
+}
+
+.fa-window-close{
+    font-size: 25px;
+}
+
+.ul-login{  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-right: 40px;    
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ul-login a{
+    font-size: 18px;
+    font-weight: 600;    
+}
+
+.ul-login li{
+    padding: 10px;
+}
+
+.ul-login p{
+    padding: 0;
+    margin-top: 4px;
+}
 
 
 /** HEADER **/
-
-
 
 nav{
     width: 100%;
     background-color: rgb(68, 68, 68);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     position: fixed;
-    bottom: 0;
+    bottom: 0;    
     
 }
 
@@ -124,9 +188,8 @@ nav{
     justify-content: space-evenly;
 }
 
-
 .fa-whatsapp{
-    font-size: 30px;
+    font-size: 25px;
     color: white;
 }
 
@@ -146,49 +209,38 @@ nav{
 }
 
 .loggin{
-    width: 40%;
-   
+    width: 30%;   
 
 }
 
 .list-loggin{
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     display: flex;
     justify-content: space-evenly;
+    align-items: center ;
 }
 
 .list-loggin a{
     color: white;
 }
 
-
-
-
-/** FOOTER **/
-
-
-
-
-footer{
-    background-color: rgb(68, 68, 68);
-    width: 100%;
-    height: 110px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    color: white;
-    
-}
-
-footer a{
-    color: white;
-    top: 50px;
+.login-button{
+    background-color:  rgb(68, 68, 68);
+    border-style: none;
     font-family: 'Cinzel Decorative', cursive;
-    display: flex;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
 }
+
+.login-button:hover{
+    color: rgb(224, 224, 224);
+}
+
+
+
+
 
 
 
