@@ -150,7 +150,7 @@ main{
 }
 
 .ul-login a{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;    
 }
 
@@ -270,15 +270,27 @@ nav{
 @media screen and (max-width: 1350px){
 
     .modal-login{
-        width: 55%;
+        width: 43%;
     }
 
     .loggin{
-        width: 55%;
+        width: 50%;
     }
 
-    .background{
+    
 
+}
+
+@media screen and (max-width: 1090px){
+
+    .modal-login{
+        width: 52%;
     }
+
+    .loggin{
+        width: 52%;
+    }
+
+    
 
 }
