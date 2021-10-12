@@ -9,28 +9,24 @@ const inputUsuario = document.getElementById("email")
 const inputContraseña = document.getElementById("password")
 const botonEnviarLogin = document.getElementById("button-login")
 
-// FUNCIONES REUTILIZABLES (OBJETO A JSON // JSON A OBJETO )
 
-const conversionAJSON = (objeto) =>{
-    const objetoAJSON = JSON.stringify(objeto)
-}
 
-const conversionDeJSONAObjeto = (objetoJSON) =>{
-    const nuevoObjetoDesdeJSON = JSON.parse(objetoJSON)
-}
+// FUNCION PARA (OBJETO A JSON GUARDAR EN LOCALSTORAGE && TOMAR UN DATO DE LOCALSTORAGE // JSON A OBJETO )
 
-// FUNCION PARA GUARDAR EN LOCALSTORAGE Y TOMAR UN DATO DE LOCALSTORAGE
 
-const guardarJSONEnLocalStorage = (objeto, clave) =>{
-    const objetoJSON = conversionAJSON(objeto)
+const convertirYGuardarJSONEnLocalStorage = (objeto, clave) =>{
+    const objetoJSON = JSON.stringify(objeto)
     localStorage.setItem(clave, objetoJSON)
+    return objetoJSON
 }
 
-const objetoObtenidoDeLStorage = (clave) =>{
+const deLStorageAObjeto = (clave) =>{
     const JSONAObjeto = localStorage.getItem(clave)
     const objetoNuevo = JSON.parse(JSONAObjeto)
-
+    return objetoNuevo
 }
+
+
 
 // FUNCIONES DE BOTONES
 
@@ -57,14 +53,25 @@ let  sesionIniciada = false
 botonEnviarLogin.onclick = () =>{
     if (usuario.email === inputUsuario.value && usuario.contraseña === inputContraseña.value){
         sesionIniciada = true
+        window.location.href="pagina.html"
+        convertirYGuardarJSONEnLocalStorage({sesionIniciada : true}, "Sesion")
+        estaIniciada("sesion")
+
                 
     }
     else{
         inputUsuario.style.border = "1px solid red"
         inputContraseña.style.border = "1px solid red"
-        sesionIniciada = false      
+        console.log("datos incorrectos")     
 
     }
 
 
 }
+
+const estaIniciada = (sesion) =>{
+    deLStorageAObjeto(sesion)
+    if(objetoNuevo === true){
+        window.location.href= "pagina.html"
+    }
+} 
