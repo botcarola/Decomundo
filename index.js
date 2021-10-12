@@ -47,7 +47,7 @@ if (usuario.email === inputUsuario.value && usuario.contraseña === inputContras
     sesionIniciada = true
     window.location.href="pagina.html"
     convertirYGuardarJSONEnLocalStorage({sesionIniciada : true}, "Sesion")
-    estaIniciada("sesion")            
+    estaIniciada("Sesion")            
 }
 else{
     inputUsuario.style.border = "1px solid red"
@@ -56,7 +56,7 @@ else{
 }
 }
 
-const estaIniciada = () =>{
+const estaIniciada = (id) =>{
 deLStorageAObjeto(id)
 if(objetoNuevo === true){
     window.location.replace= "pagina.html"
