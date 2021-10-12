@@ -9,69 +9,56 @@ const inputUsuario = document.getElementById("email")
 const inputContraseña = document.getElementById("password")
 const botonEnviarLogin = document.getElementById("button-login")
 
-
-
 // FUNCION PARA (OBJETO A JSON GUARDAR EN LOCALSTORAGE && TOMAR UN DATO DE LOCALSTORAGE // JSON A OBJETO )
 
-
 const convertirYGuardarJSONEnLocalStorage = (objeto, clave) =>{
-    const objetoJSON = JSON.stringify(objeto)
-    localStorage.setItem(clave, objetoJSON)
-    return objetoJSON
+const objetoJSON = JSON.stringify(objeto)
+localStorage.setItem(clave, objetoJSON)
+return objetoJSON
 }
 
 const deLStorageAObjeto = (clave) =>{
-    const JSONAObjeto = localStorage.getItem(clave)
-    const objetoNuevo = JSON.parse(JSONAObjeto)
-    return objetoNuevo
+const JSONAObjeto = localStorage.getItem(clave)
+const objetoNuevo = JSON.parse(JSONAObjeto)
+return objetoNuevo
 }
-
-
 
 // FUNCIONES DE BOTONES
 
 botonNav.onclick = () =>{
-    formLogin.style.display ="flex"
+formLogin.style.display ="flex"
 }
 
 botonCerrarModalDeLogin.onclick = () => {
-    formLogin.style.display ="none"
+formLogin.style.display ="none"
 }
-
-
 
 // LOGIN OBJETO/JSON
 
 const usuario = {
-    email: "carola@gmail.com",
-    contraseña: "Botcarola27"
+email: "carola@gmail.com",
+contraseña: "Botcarola27"
 }
 
 let  sesionIniciada = false
 
-
 botonEnviarLogin.onclick = () =>{
-    if (usuario.email === inputUsuario.value && usuario.contraseña === inputContraseña.value){
-        sesionIniciada = true
-        window.location.href="pagina.html"
-        convertirYGuardarJSONEnLocalStorage({sesionIniciada : true}, "Sesion")
-        estaIniciada("sesion")
-
-                
-    }
-    else{
-        inputUsuario.style.border = "1px solid red"
-        inputContraseña.style.border = "1px solid red"
-        console.log("datos incorrectos")     
-
-    }
-
-
+if (usuario.email === inputUsuario.value && usuario.contraseña === inputContraseña.value){
+    sesionIniciada = true
+    window.location.href="pagina.html"
+    convertirYGuardarJSONEnLocalStorage({sesionIniciada : true}, "Sesion")
+    estaIniciada("sesion")            
+}
+else{
+    inputUsuario.style.border = "1px solid red"
+    inputContraseña.style.border = "1px solid red"
+    console.log("datos incorrectos")   
+}
 }
 
-const estaIniciada = (sesion) =>{
-    deLStorageAObjeto(sesion)
-    if(objetoNuevo === true){
-        window.location.href= "pagina.html"
-    }
+const estaIniciada = () =>{
+deLStorageAObjeto(id)
+if(objetoNuevo === true){
+    window.location.replace= "pagina.html"
+}
 } 
